@@ -89,6 +89,8 @@ DirectiveGenerator.prototype.filesGHPages = function filesGHPages() {
 if(this.moduleType =='directive') {
 	this.mkdir('pages');
 	this.mkdir('pages/home');
+	this.mkdir('src');
+	this.mkdir('dist');
 
 	this.copy('gh-pages/_.gitignore', '.gitignore');
 	
@@ -99,9 +101,9 @@ if(this.moduleType =='directive') {
 	this.template('gh-pages/_index.html', 'index.html');
 	this.template('gh-pages/_package.json', 'package.json');
 	
-	this.template('gh-pages/_directive.js', this.moduleNamePart+'.js');
-	this.template('gh-pages/_directive.less', this.moduleNamePart+'.less');
-	this.template('gh-pages/__directive.less', '_'+this.moduleNamePart+'.less');
+	this.template('gh-pages/src/_directive.js', 'src/'+this.githubName +this.moduleName+'.js');
+	this.template('gh-pages/_directive.less', this.githubName + this.moduleName+'.less');
+	this.template('gh-pages/__directive.less', '_'+this.githubName + this.moduleName+'.less');
 	
 	this.copy('gh-pages/server.js', 'server.js');
 	

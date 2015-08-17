@@ -1,6 +1,6 @@
 {
-	"name": "<%= moduleName %>",
-	"version": "1.0.0",
+	"name": "<%= <%= modulePrefix%><%= moduleNamePart%> %>",
+	"version": "0.0.1",
 	"authors": [
 		"<%= authorName %>"
 	],
@@ -16,6 +16,10 @@
 			}
 		}
 		%>
+	],
+	"main": [
+		"dist/<%= githubName %><%= moduleName%>.min.js",
+		"dist/<%= githubName %><%= moduleName%>.min.css"
 	],
 	"license": "MIT",
 	"ignore": [

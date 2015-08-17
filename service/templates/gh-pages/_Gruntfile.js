@@ -81,8 +81,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    '<%= moduleNamePart%>.js',
-					dest:   '<%= moduleNamePart%>.min.js'
+					src:    'src/<%= githubName %><%= moduleName%>.js',
+					dest:   'dist/<%= githubName %><%= moduleName%>.min.js'
 				}
 			}/*,
 			karma: {

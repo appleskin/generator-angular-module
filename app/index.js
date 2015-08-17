@@ -19,7 +19,7 @@ var AngularModuleGenerator = module.exports = function AngularModuleGenerator(ar
 	//call directive sub-generator
 	// if(this.options.props.moduleType =='directive') {		//apparently don't have access to options yet AND can only call hookFor from outer level here in constructor so there's no way to conditionally call a hookFor based on the prompts?! wtf?
 	if(1) {
-		this.hookFor('angular-module:directive', {
+		this.hookFor('appleskin-angular-module:directive', {
 			args: ['name'],		//apparently this is required - get an error if don't have it - even though I don't use or need it..
 			options: {
 				options: this.options
@@ -28,7 +28,7 @@ var AngularModuleGenerator = module.exports = function AngularModuleGenerator(ar
 	}
 	
 	//call service sub-generator
-	this.hookFor('angular-module:service', {
+	this.hookFor('appleskin-angular-module:service', {
 		args: ['name'],		//apparently this is required - get an error if don't have it - even though I don't use or need it..
 		options: {
 			options: this.options

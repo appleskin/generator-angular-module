@@ -1,5 +1,5 @@
 {
-  "name": "generator-angular-module",
+  "name": "generator-appleskin-angular-module",
   "version": "1.0.3",
   "description": "Generate Angular directive or service with gh-pages git branch for demo, typically for packaging as a bower module.",
   "keywords": [
@@ -14,8 +14,8 @@
 	"gh-pages",
 	"github"
   ],
-  "homepage": "https://github.com/jackrabbitsgroup/generator-angular-module",
-  "bugs": "https://github.com/jackrabbitsgroup/generator-angular-module/issues",
+  "homepage": "https://github.com/appleskin/generator-angular-module",
+  "bugs": "https://github.com/appleskin/generator-angular-module/issues",
   "author": {
     "name": "Luke Madera",
     "email": "",
@@ -24,7 +24,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jackrabbitsgroup/generator-angular-module.git"
+    "url": "git://github.com/appleskin/generator-angular-module.git"
   },
   "scripts": {
     "test": "mocha"

@@ -84,8 +84,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    '<%= moduleNamePart%>.js',
-					dest:   '<%= moduleNamePart%>.min.js'
+					src:    'src/<%= githubName %><%= moduleName%>.js',
+					dest:   'dist/<%= githubName %><%= moduleName%>.min.js'
 				}
 			},
 			less: {
@@ -94,14 +94,14 @@ module.exports = function(grunt) {
 					},
 					files: {
 						"main.css": "_base.less",
-						"<%= moduleNamePart%>.css": "_<%= moduleNamePart%>.less"
+						"src/<%= githubName %><%= moduleName%>.css": "_<%= githubName %><%= moduleName%>.less"
 					}
 				}
 			},
 			cssmin: {
 				dev: {
-					src: ['<%= moduleNamePart%>.css'],
-					dest: '<%= moduleNamePart%>.min.css'
+					src: ['src/<%= githubName %><%= moduleName%>.css'],
+					dest: 'dist/<%= githubName %><%= moduleName%>.min.css'
 				}
 			}/*,
 			karma: {

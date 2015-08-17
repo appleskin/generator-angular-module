@@ -8,7 +8,7 @@
 'use strict';
 
 angular.module('<%= githubName %>.<%= moduleName %>', [])
-.factory('<%= modulePrefix%><%= _.capitalize(_.camelize(moduleNamePart)) %>', [ function () {
+.factory('<%= githubName %><%= moduleName%>', [ function () {
 
 	//public methods & properties
 	var self ={

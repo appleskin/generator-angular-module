@@ -121,6 +121,8 @@ AngularModuleGenerator.prototype.commandsMaster =function commandsMaster() {
 AngularModuleGenerator.prototype.appGHPages = function app() {
 	this.mkdir('pages');
 	this.mkdir('pages/home');
+	this.mkdir('src');
+	this.mkdir('dist');
 
 	this.copy('gh-pages/.gitignore', '.gitignore');
 	
@@ -131,7 +133,7 @@ AngularModuleGenerator.prototype.appGHPages = function app() {
 	this.template('gh-pages/_index.html', 'index.html');
 	this.template('gh-pages/_package.json', 'package.json');
 	
-	this.template('gh-pages/_directive.js', this.moduleNamePart+'.js');
+	this.template('gh-pages/src/_directive.js', this.moduleNamePart+'.js');
 	this.template('gh-pages/_directive.less', this.moduleNamePart+'.less');
 	
 	this.copy('gh-pages/pages/home/home.html', 'pages/home/home.html');

@@ -89,6 +89,8 @@ ServiceGenerator.prototype.filesGHPages = function filesGHPages() {
 if(this.moduleType =='service') {
 	this.mkdir('pages');
 	this.mkdir('pages/home');
+	this.mkdir('src');
+	this.mkdir('dist');
 
 	this.copy('gh-pages/_.gitignore', '.gitignore');
 	
@@ -98,7 +100,7 @@ if(this.moduleType =='service') {
 	this.template('gh-pages/_index.html', 'index.html');
 	this.template('gh-pages/_package.json', 'package.json');
 	
-	this.template('gh-pages/_service.js', this.moduleNamePart+'.js');
+	this.template('gh-pages/src/_service.js', 'src/' + this.githubName + this.moduleName+'.js');
 	
 	this.copy('gh-pages/server.js', 'server.js');
 	
